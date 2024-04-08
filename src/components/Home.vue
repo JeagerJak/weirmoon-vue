@@ -6,12 +6,11 @@
 <div>
   <div>
     <h3>
-      Home
+      Home Page for Weirmoon
     </h3>
     <div>
       <p>
-        This is where the main content will be.
-        Demonstrating what it will look like.
+        Content coming soon!
       </p>
     </div>
   </div>
