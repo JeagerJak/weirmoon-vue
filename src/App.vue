@@ -1,6 +1,6 @@
 <script setup>
-import Home from "@/components/Home.vue";
-import Navigation from "@/components/Navigation.vue";
+import Home from "@/components/Pages/Home.vue";
+import Navigation from "@/components/Shared/Navigation.vue";
 </script>
 
 <template>
