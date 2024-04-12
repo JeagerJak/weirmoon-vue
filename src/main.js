@@ -12,13 +12,20 @@ import About from "@/components/Pages/About.vue"
 import Astrophotography from "@/components/Pages/Astrophotography.vue";
 
 const routes = [
-    { path:'/', component:Home},
-    { path:'/About', component:About},
-    {path:'/Astrophoto', component: Astrophotography},
+    { path:'/', component:Home, meta:{title:"Weirmoon HOME"}},
+    { path:'/About', component:About, meta:{title:"ABOUT WEIRMOON"}},
+    {path:'/Astrophoto', component: Astrophotography, meta:{title:"Astro"}},
 ];
 const router = createRouter({
     history: createMemoryHistory(),
     routes,
+});
+
+router.beforeEach((to, from, next) => {
+    document.title = (to.meta && to.meta.title)
+        ? to.meta.title
+        : "WEIRMOON";
+    next();
 });
 
 /** ROUTER END */
