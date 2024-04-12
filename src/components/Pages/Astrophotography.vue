@@ -3,7 +3,8 @@
 </script>
 
 <template>
-    <h1> Astrophotography home page</h1>
+    <h1> Astrophotography Home page</h1>
+    <p>Content coming soon</p>
 </template>
 
 <style scoped>

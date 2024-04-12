@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<div>
+<div class="container">
   <div>
     <h3>
       Home Page for Weirmoon
@@ -18,5 +18,6 @@
 </template>
 
 <style scoped>
+
 
 </style>

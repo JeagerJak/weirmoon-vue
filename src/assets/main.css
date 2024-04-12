@@ -1,35 +1,83 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
+.container {
+  max-width: fit-content;
+  margin-inline: auto;
+}
+
+nav {
   margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  max-width: fit-content;
+  display: flex;
+  justify-content: space-between; /* Pushes elements apart */
 }
 
-a,
-.green {
+.nav-title {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-ul li {
+  border: 2px transparent solid;
+  border-radius: .8em;
+  cursor: pointer;
+}
+
+.nav-ul li:hover {
+  border: 2px black solid;
+  border-radius: .8em;
+}
+
+.nav-title li {
+  margin-right: 10px;
+  font-size: large;
+  padding: .3em;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Center vertically within nav */
+}
+
+.nav-list li {
+  margin-left: 10px; /* Pushes items to the right */
+  font-size: large;
+  padding: .3em;
+}
+
+.nav-list li:first-child {
+  margin-left: auto; /* Pushes the first item to the right */
+}
+
+.nav-list li a {
+  cursor: inherit;
+  color: inherit;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-left: 0; /* Reset margin for mobile view */
+  }
+
+  .nav-list li:first-child {
+    margin-left: 0; /* Reset margin for mobile view */
   }
 }
